@@ -39,3 +39,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+*.json
+.env
+echo "ai-interview-practice-10697-firebase-adminsdk-fbsvc-33067ff89f.json" >> .gitignore
+ai-interview-practice-10697-firebase-adminsdk-fbsvc-33067ff89f.json
