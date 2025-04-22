@@ -144,7 +144,6 @@ const Agent = ({
     setCallStatus(CallStatus.FINISHED);
     vapi.stop();
   };
-
   return (
     <>
       <div className="call-view">
