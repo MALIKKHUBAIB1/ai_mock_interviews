@@ -22,9 +22,13 @@ const App = () => {
 
   async function reviewCode() {
     try {
-      const response = await axios.post("http://localhost:3000/ai/get-review", {
-        code,
-      });
+      const response = await axios.post(
+        process.env.NEXT_PUBLIC_BASE_URL ||
+          "https://ai-mock-interviews-sage-three.vercel.app/",
+        {
+          code,
+        }
+      );
       setReview(response.data);
     } catch (error) {
       console.error("Error reviewing code:", error);
