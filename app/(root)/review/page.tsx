@@ -8,6 +8,7 @@ import rehypeHighlight from "rehype-highlight";
 import "highlight.js/styles/github-dark.css";
 import axios from "axios";
 import { motion, AnimatePresence } from "framer-motion";
+import { generateContent } from "@/app/api/review/route";
 
 const App = () => {
   const [code, setCode] = useState<string>(
@@ -22,14 +23,8 @@ const App = () => {
 
   async function reviewCode() {
     try {
-      const response = await axios.post(
-        process.env.NEXT_PUBLIC_BASE_URL ||
-          "https://ai-mock-interviews-sage-three.vercel.app/",
-        {
-          code,
-        }
-      );
-      setReview(response.data);
+      const review = await generateContent(code); // Pass code to AI for review
+      setReview(review); // Set the AI's review in the state
     } catch (error) {
       console.error("Error reviewing code:", error);
     }

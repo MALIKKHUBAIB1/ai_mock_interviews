@@ -4,6 +4,7 @@ const genAI = new GoogleGenerativeAI(
   process.env.GOOGLE_GENERATIVE_AI_API_KEY ||
     "AIzaSyBDH28QBdtwag99q_sxINkGr3R1HHSUamo"
 );
+
 const model = genAI.getGenerativeModel({
   model: "gemini-2.0-flash",
   systemInstruction: `
@@ -87,6 +88,7 @@ export async function generateContent(prompt: string): Promise<string> {
     const result = await model.generateContent(prompt);
     const text = result.response.text();
     console.log("Generated Response:", text);
+    console.log(text);
     return text;
   } catch (error) {
     console.error("Error generating content:", error);
