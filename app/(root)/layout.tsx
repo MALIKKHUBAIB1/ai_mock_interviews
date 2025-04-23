@@ -17,10 +17,20 @@ const Layout = async ({ children }: { children: ReactNode }) => {
           <h2 className="text-primary-100">PrepWise</h2>
         </Link>
 
-        {/* Let's Code link */}
-        <Link href="/review" className="text-primary-100 text-sm">
-          <h2 className="text-primary-100">Let's Code</h2>
-        </Link>
+        <div className="flex items-center gap-4">
+          {/* Let's Code link (internal) */}
+          <Link href="/review" className="text-primary-100 text-sm">
+            <h2 className="text-primary-100">Let's Code</h2>
+          </Link>
+
+          {/* Code Editor link (external, opens in same tab) */}
+          <a
+            href="https://code-editor-two-navy.vercel.app/"
+            className="text-primary-100 text-sm"
+          >
+            <h2 className="text-primary-100">Code Editor</h2>
+          </a>
+        </div>
       </nav>
 
       {children}
