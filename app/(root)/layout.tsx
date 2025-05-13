@@ -14,10 +14,10 @@ const Layout = async ({ children }: { children: ReactNode }) => {
       <nav className="flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2">
           <Image src="/logo.svg" alt="MockMate Logo" width={38} height={32} />
-          <h2 className="text-primary-100">PrepWise</h2>
+          <h2 className="text-primary-100">PrepMinds</h2>
         </Link>
 
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-8">
           {/* Let's Code link (internal) */}
           <Link href="/review" className="text-primary-100 text-sm">
             <h2 className="text-primary-100">Let's Code</h2>

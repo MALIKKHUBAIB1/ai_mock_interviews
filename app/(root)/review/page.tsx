@@ -6,7 +6,6 @@ import prism from "prismjs";
 import Markdown from "react-markdown";
 import rehypeHighlight from "rehype-highlight";
 import "highlight.js/styles/github-dark.css";
-import axios from "axios";
 import { motion, AnimatePresence } from "framer-motion";
 import { generateContent } from "@/app/api/review/route";
 
@@ -14,6 +13,7 @@ const App = () => {
   const [code, setCode] = useState<string>(
     `function sum() {\n  return 1 + 1;\n}`
   );
+
   const [review, setReview] = useState<string>("");
   const [showModal, setShowModal] = useState<boolean>(false);
 

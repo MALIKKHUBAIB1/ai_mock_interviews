@@ -91,7 +91,6 @@ export async function generateContent(prompt: string): Promise<string> {
     console.log(text);
     return text;
   } catch (error) {
-    console.error("Error generating content:", error);
     return "❌ Failed to generate review. Please try again later.";
   }
 }
